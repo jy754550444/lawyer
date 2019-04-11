@@ -1,0 +1,235 @@
+{% load static %}
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{% static 'css/civil.css' %}">
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">
+</script>
+<body>
+<!--startprint-->
+<div>
+    <h3 style="text-align: center">民事委托代理协议</h3>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            {% if all_data %}
+                <div>
+
+                    <div class="col-md-3">
+                        <p>
+                            甲方：{% if all_data.nail_name %}
+                            {{ all_data.nail_name }}
+                        {% else %}
+                            {{ all_data.company }}
+                            <p>法定代表人：{{ all_data.legal }}</p>
+                        {% endif %}
+                        </p>
+                    </div>
+                    {#                    <div style="line-height: 1; margin-top: 70px;margin-bottom: 13px;">#}
+                    {#                        <p>甲 &nbsp;&nbsp;&nbsp;方：<u class="u">{{ all_data.nail_name }}</u></p>#}
+                    {##}
+                    {#                        <p>地 &nbsp;&nbsp;&nbsp;址：<u class="u">{{ all_data.nail_name }}</u></p>#}
+                    {##}
+                    {#                        <p>乙 &nbsp;&nbsp;&nbsp;方：<u class="u">{{ all_data.nail_name }}</u></p>#}
+                    {##}
+                    {#                        <p>地 &nbsp;&nbsp;&nbsp;址：<u class="u">{{ all_data.nail_name }}</u></p>#}
+                    {#                    </div>#}
+                    {#                    <div style="float: right;margin-top: -115px; line-height: 1;padding-right: 200px;">#}
+                    {#                        <p>法定代表人：<u class="u">{{ all_data.nail_name }}</u></p>#}
+                    {##}
+                    {#                        <p>电 &nbsp;&nbsp;&nbsp;&nbsp;话：<u class="u">{{ all_data.nail_name }}</u></p>#}
+                    {##}
+                    {#                        <p>法定代表人：<u class="u">{{ all_data.nail_name }}</u></p>#}
+                    {##}
+                    {#                        <p>电 &nbsp;&nbsp;&nbsp;&nbsp;话：<u class="u">{{ all_data.nail_name }}</u></p>#}
+                    {#                    </div>#}
+
+                    <p class="tab">甲方因<u class="u ">{{ all_data.case }}</u>纠纷一案，根据中华人民共和国《合同法》、《民事诉讼法》、《仲裁法》和《律师法》等有关法律的规定，聘请乙方的律师作为委托代理人。
+                    </p>
+
+                    <div class="tab">
+                        <p>甲乙双方按照诚实信用原则，经协商一致，立此合同，共同遵守。</p>
+
+                        <p class="word">第一条 委托代理事项</p>
+
+                        <p>乙方接受甲方委托，委派律师在下列案件中担任甲方委托代理人：</p>
+
+                        <p>1、对方当事人名称或者姓名：{{ all_data.name }}</p>
+
+                        <p>2、案由：{{ all_data.case }}</p>
+
+                        <p>3、审理机关：{{ all_data.court }}</p>
+
+                        <p>4、审级:{% if all_data.Trial_level == '1' %}
+                            一
+                        {% else %}
+                            二
+                        {% endif %}</p>
+
+                        <p class="word">第二条 委托代理权限</p>
+
+                        <p>( )一般代理。</p>
+
+                        <p>( )特别代理，包括代为承认、放弃、变更诉讼（仲裁、执行）请求，进行调解、和解，提起反诉（反请求）或上诉，收取或者收转执行标的，签署、送达、接受法律文书。</p>
+
+                        <p class="word">第三条 乙方的义务</p>
+
+                        <p>1、乙方委派<u class="u">{{ all_data.Law }}</u>律师作为上述案件中甲方的委托代理人，甲方同意上述律师指派其他业务助理配合完成辅助工作，但乙方更换代理律师应取得甲方认可；
+                        </p>
+
+                        <p>2、乙方律师应当勤勉、尽责地完成第一条所列委托代理事项</p>
+
+                        <p>5、乙方律师不得违反《律师执业规范》，在涉及甲方的对抗性案件中，为经甲方同意，不得同时担任与甲方具有法律上利益冲突的另一方的委托代理人。</p>
+
+                        <p>6、乙方律师对其获知的甲方的商业机密或者甲方的个人隐私负有保密责任，非由法律规定或者甲方同意，不得向任何第三方披露；</p>
+
+                        <p>7、乙方对甲方业务应当单独建档，应当保存完整的工作记录，对涉及甲方的原始证据、法律文件和财务应当妥善保管。</p>
+
+                        <p class="word">第四条 甲方的义务</p>
+
+                        <p>1、甲方应当真实、详尽和及时地向乙方律师叙述案情，提供与委托代理事项有关的证据、文件及其他事实材料；</p>
+
+                        <p>2、甲方应当积极、主动地配合乙方律师的工作，甲方对乙方律师提出的要求应当明确、合理；</p>
+
+                        <p>3、甲方应当按时、足额向乙方支付律师代理费和工作费用；</p>
+
+                        <p>4、甲方指定<u class="u">{{ all_data.nail_name }}</u>
+                            为乙方的联系人，负责转达甲方的指示和要求，提供文件和资料等，甲方更换联系人应当通知委托代理人；</p>
+
+                        <p>5、甲方有责任对委托代理事项作出独立的判断、决策，甲方根据乙方律师提供的法律意见、建议、方案作出的决定而导致的损失，非因乙方律师错误运用法律等失职行为造成的，由甲方自行承担。</p>
+
+                        <p>6、甲方同意乙方律师可以委派其他律师或助理配合完成辅助工作。</p>
+
+                        <p class="word">第五条 律师代理费</p>
+
+                        <p>经双方协商同意，甲方向乙方支付律师代理费人民币（大写）<u class="u">{{ all_data.agency_fee }}</u>万元整，自本合同签字日_____支付</p>
+
+                        <p>乙方户名：{{ all_data.house_name }}</p>
+
+                        <p>开户行：{{ all_data.opening_bank }}</p>
+
+                        <p>帐号：{{ all_data.account }}</p>
+
+                        <p class="word">第六条 办案费用</p>
+
+                        <p>乙方律师办理甲方委托代理事项所发生的下列工作费用，应当由甲方承担；</p>
+
+                        <p>1、相关行政、司法、鉴定、公证等部门收取的费用；</p>
+
+                        <p>2、在乙方从事与甲方业务有关的活动中发生的包括但不限于、翻译，复印，资料，交通、通讯差旅等费用；</p>
+
+                        <p>3、征得甲方同意后支出的其他费用。</p>
+
+                        <p class="word">第七条 特别告知</p>
+
+                        <p>
+                            诉讼有风险，乙方及承办律师在办案过程中对承办案件的咨询或代理意见、法律意见、建议、方案等仅作为法律层面上的分析论证或预测，不作为诉讼结果的承诺与保证。乙方及承办律师对诉讼结果不承担法律责任。</p>
+
+                        <p class="word">第八条 合同的解除</p>
+
+                        <p>甲乙双方经协商同意，可以变更或者解除本合同。</p>
+
+                        <p>乙方有下列情形之一的，甲方有权解除合同：</p>
+
+                        <p>1、乙方律师不得违反《律师执业规范》，在涉及甲方的对抗性案件中，为经甲方同意，不得同时担任与甲方具有法律上利益冲突的另一方的委托代理人。</p>
+
+                        <p>2、乙方律师对其获知的甲方的商业机密或者甲方的个人隐私负有保密责任，非由法律规定或者甲方同意，不得向任何第三方披露；</p>
+
+                        <p>甲方有下列情形之一的，乙方有权解除合同：</p>
+
+                        <p>1、甲方的委托事项违法法律或者违反律师执业规范的；</p>
+
+                        <p>2、甲方有捏造事实、伪造证据或者隐瞒重要情节等情形的；</p>
+
+                        <p>3、甲方逾期<u>{{ all_data.be_overdue }}</u>日仍不向乙方支付律师代理费或者工作费用的。</p>
+
+                        <p class="word">第九条 违约责任</p>
+
+                        <p>乙方无正当理由不提供第一条规定的法律服务或者违反第三条规定的义务，</p>
+
+                        <p>甲方有权要求乙方退还部分或者全部法律顾问费。</p>
+
+                        <p>乙方律师因工作延误、失误、失职导致甲方蒙受损失，或者违反第二条第5&mdash;7先规定的义务之一的，乙方应当通过所其投保的执业保险向甲方承担赔偿责任。</p>
+
+                        <p>甲方无正当理由不支付法律顾问费或者工作费用，或者无故终止合同，乙方有权要求甲方支付未付的法律顾问费、未报销的工作费用以及延期支付的利息。</p>
+
+                        <p>甲方不得以如下非正当理由要求乙方退费：</p>
+
+                        <p>1、甲方单方面又委托其他律师事务所的律师代理的；</p>
+
+                        <p>2、乙方完成委托代理事项后，甲方以乙方收费过高为由要求退费的；</p>
+
+                        <p>3、甲方作为被告时，乙方律师已经为出庭作好准备，而原告方撤诉的；</p>
+
+                        <p>4、其他非因乙方或者乙方律师的原因，甲方无故终止合同的。</p>
+
+                        <p class="word">第十条 争议的解决</p>
+
+                        <p>本合同使用中华人民共和国《合同法》、《律师法》、《民事诉讼法》、《仲裁法》等法律。</p>
+
+                        <p>甲乙双方如果发生争议，应当友好协商解决。如协商不成，任何一方均有权：</p>
+
+                        <p>( )将争议向葫芦岛仲裁委员会提起仲裁。</p>
+
+                        <p>( )向葫芦岛当地人民法院提起诉讼。</p>
+
+                        <p class="word">第十一条 合同的生效</p>
+
+                        <p>本合同一式三份，甲方执一份乙方执两份，由甲乙双方代表签字盖章之日起生效，法院对<u>本案</u>作出判决、裁定（或调解）之日止。</p>
+
+                        <p>之日起生效，至乙方完成甲方所委托的代理事项为止。</p>
+
+                        <p class="word">第十二条 通知和送达</p>
+
+                        <p>
+                            甲乙双方因履行本合同而相互发出或者提供的所有通知、文件、资料，均以扉页所列明的地址、传真送达、一方如果迁址或者变更电话，应当书面通知对方，通过传真方式的，在发出传真时视为送达；以邮寄方式的，挂号寄出或者投邮当日为送达。</p>
+
+                        <div style="line-height: 3; margin-top: 100px;">
+                            <p>甲方（签章）：</p>
+
+                            <p>法定代表人（授权代表）：</p>
+
+                            <p>签订日期：{{ all_data.start_date }}</p>
+                        </div>
+                        <div style="float: right;line-height:3;margin-top: -185px; ">
+                            <p>乙方（签章）：</p>
+
+                            <p>法定代表人：</p>
+
+                            <p>签订日期：{{ all_data.start_date }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!--endprint-->
+</body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <button onclick="dayin()" type="button" class="btn btn-success col-md-4">打 印</button>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        dayin();
+    });
+    function dayin() {
+        bdhtml = window.document.body.innerHTML;//获取当前页的html代码
+        sprnstr = "<!--startprint-->";//设置打印开始区域
+        eprnstr = "<!--endprint-->";//设置打印结束区域
+        prnhtml = bdhtml.substring(bdhtml.indexOf(sprnstr) + 26); //从开始代码向后取html
+        prnhtml = prnhtml.substring(0, prnhtml.indexOf(eprnstr));//从结束代码向前取html
+        window.document.body.innerHTML = prnhtml;
+        window.print();
+    }
+</script>

@@ -1,0 +1,220 @@
+{% load static %}
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{% static 'css/civil.css' %}">
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">
+</script>
+<body>
+<!--startprint-->
+<div>
+    <h3 style="text-align: center">刑事案件委托代理协议（一审阶段）</h3>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            {% if all_data %}
+                <div class="tab">
+                    <div style="line-height: 1; margin-top: 70px;margin-bottom: 13px;">
+                        <p>甲 &nbsp;&nbsp;&nbsp;方：<u class="u">{{ all_data.nail_name }}</u></p>
+
+                        <p>电 &nbsp;&nbsp;&nbsp;&nbsp;话：<u class="u">{{ all_data.nail_tel }}</u></p>
+
+                        <p>乙 &nbsp;&nbsp;&nbsp;方：<u class="u">{{ all_data.law }}</u></p>
+
+                        <p>地 &nbsp;&nbsp;&nbsp;址：<u class="u">{{ all_data.nail_address }}</u></p>
+                    </div>
+                    <div style="float: right;margin-top: -115px; line-height: 1;padding-right: 200px;">
+                        <p>身份证：<u class="u">{{ all_data.nail_code }}</u></p>
+
+                        <p>地 &nbsp;&nbsp;&nbsp;址：<u class="u">{{ all_data.b_address }}</u></p>
+
+                        <p>电 &nbsp;&nbsp;&nbsp;&nbsp;话：<u class="u">{{ all_data.b_tel }}</u></p>
+                    </div>
+
+                    <p>甲方因<u class="u">{{ all_data.nail_name }}</u>涉嫌<u class="u">{{ all_data.case }}</u>一案，根据《中华人民共和国刑事诉讼法》和《中华人民共和国律师法》等有关法律的规定，聘请乙方律师提供法律帮助、辩护或代理。
+                    </p>
+
+                    <p>甲、乙双方本着诚实信用原则，经充分协商，订立本合同，共同信守</p>
+
+                    <p class="word">第一条 委托事项</p>
+
+                    <p>乙方接受甲方委托，指派<u class="u">{{ all_data.user }}</u>律师在<u class="u">{{ all_data.nail_name }}</u>涉嫌<u
+                            class="u">{{ all_data.case }}</u>一案中，在<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>阶段（侦查和审查起诉、一审、二审、申诉），为<u>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>（犯罪嫌疑人、被告人、被害人、自诉人）提供（法律帮助、辩护或代理）。</p>
+
+                    <p class="word">第二条 乙方提供法律服务范围包括（因乙方律师所不能控制的原因无法完成或无法及时完成的除外）：</p>
+
+                    <p>（一）侦查阶段。包括（选择项以划√为确认，划×为否认）；</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>１、提供法律咨询：</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>２、代理申诉、控告：</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>３、申请取保候审：</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>４、向侦查机关了解犯罪嫌疑人涉嫌的罪名：
+                    </p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>５、会见犯罪嫌疑人：</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>６、查阅、摘抄、复制本案的诉讼文书、技术性鉴定材料。
+                    </p>
+
+                    <p>（二）审查起诉阶段。包括（选择项以划√为确认，划×为否认）；</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>１、提供法律咨询：</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>２、代理申诉、控告：</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>３、申请取保候审：</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>４、会见犯罪嫌疑人：</p>
+
+                    <p><span style="font-size:10.5pt"><span style="font-family:Calibri"><span
+                            style="font-size:13.5000pt"><span
+                            style="font-family:Wingdings">&uml;</span></span>&nbsp;</span></span>５、查阅、摘抄、复制本案的诉讼文书、技术性鉴定材料。
+                    </p>
+
+                    <p>（二）审判阶段。包括（选择项以划√为确认，划×为否认）；</p>
+
+                    <p>（四）其他：<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>。
+                    </p>
+
+                    <p class="word">第三条 甲方的义务</p>
+
+                    <p>
+                        1.甲方应当真实、详尽和及时地向乙方律师叙述案情及介绍与案件有关的情况，提供与委托事项有关的证据、文件及其他事实材料。不得隐瞒事实，伪造证据，弄虚作假，否则，律师有权拒绝辩护或代理，所收律师费不予退回。</p>
+
+                    <p>2.甲方应当积极、主动地配合乙方律师的工作，对乙方律师提出的要求应当明确、合理。</p>
+
+                    <p>3.甲方应当按时、足额向乙方支付本合同第四条约定的律师费。</p>
+
+                    <p class="word">第四条 费用</p>
+
+                    <p>根据本案的具体情况和复杂程度，经双方充分协商，甲方同意按下列约定向乙方支付律师费：</p>
+
+                    <p>1.律师费：<u class="u">{{ all_data.defence_fee }}</u>人民币（大写：<u>{{ all_data.agency_fee }}</u>元整）。</p>
+
+                    <p>2.以上费用于本合同签订之日一次性付清。</p>
+
+                    <p>3.律师办理甲方委托代理事项发生的鉴定费、评估费、公证费、查档费、翻译费、异地办案查旅费、专家论证费等由甲方支付。</p>
+
+                    <p class="word">第五条 合同的变更和解除</p>
+
+                    <p>1.甲、乙双方经协商同意，可以变更或者解除本合同。</p>
+
+                    <p>2.甲方有下列情形之一的，乙方有权解除合同，依约所收费用不予退还：</p>
+
+                    <p>（1）甲方的要求违反法律、法规或违反律师职业道德和执业规范，法规或违反律师职业道德和执业规范，或者甲方有捏造事实、伪造证据或者隐瞒重要情节等情形的；</p>
+
+                    <p>（2）甲方逾期十日仍不向乙方足额支付律师费的；</p>
+
+                    <p>（3）甲方有其他违约行为，导致乙方律师无法正常履行职责的。</p>
+
+                    <p class="word">第六条 特别告知</p>
+
+                    <p>诉讼有风险，乙方及承办律师在办案过程中对承办案件的咨询或代理意见、建议、方案等仅作为法律层面上的分析论证或预测，不作为诉讼结果的承诺与保证。乙方及承办律师对诉讼结果不承担法律责任。</p>
+
+                    <p>下列情况视为案件代理终结，所交代理费不予退还：庭内外调解和解撤诉、判决、裁定、裁决、解除委托．</p>
+
+                    <p class="word">第七条 违约责任</p>
+
+                    <p>乙方无正当理由不履行本协议第二条约定服务的，甲方有权要求部份或全部退还律师代理费，但甲方不得以如下理由要求乙方退费：</p>
+
+                    <p>（1）甲方就已委托乙方代理的事项单方面另行委托其他律师事务所的律师代理的：</p>
+
+                    <p>（2）乙方接受委托后，甲方以乙方收费过高为由要求退费的；</p>
+
+                    <p>（3）乙方接受委托并作好出庭准备后，侦查机关撤销案件，检察机关不予起诉或者撤回案件的；</p>
+
+                    <p>（4）在自诉案件中，甲方或对方当事人不起诉或撤诉的；</p>
+
+                    <p>（5）其他非因乙方或者乙方律师的原因，甲方无故终止合同或不合理的单方解除合同的。</p>
+
+                    <p>2.甲方无正当理由不支付律师服务费或者办案费，或者不合理的单方解除合同，乙方有权要求甲方支付未支付的律师服务费及办案费，或暂停工作直至甲方正确履行义务为止。</p>
+
+                    <p>3.甲方未按合同约定按期缴纳律师费，经催告仍未履行的，乙方可单方面终止该合同。</p>
+
+                    <p class="word">第八条 争议的解决</p>
+
+                    <p>乙方就本合同条款向甲方作明确说明，甲方对该合同说明表示理解无异议。</p>
+
+                    <p>甲方双方如果发生争议，应当友好协商解决。如协商不成，一方可向乙方所在地人民法院起诉。</p>
+
+                    <p class="word">第九条 合同有效期</p>
+
+                    <p>本合同一式二份，甲乙双方各执一份。有效期自双方代表人签字或盖章之日起，至本合同委托阶段结束之日止。</p>
+
+                    <p class="word">第十条 特别约定</p>
+
+                    <p><u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>
+                    </p>
+
+                    <div style="line-height: 3; margin-top: 100px;">
+                        <p>甲方：</p>
+
+                        <p>代表人：</p>
+
+                        <p>签约日期：{{ all_data.enter_date }}</p>
+                    </div>
+                    <div style="float: right;line-height:3;margin-top: -185px; ">
+                        <p>乙方：{{ all_data.law }}</p>
+
+                        <p>代表人：</p>
+
+                    </div>
+
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!--endprint-->
+</body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <button onclick="dayin()" type="button" class="btn btn-success col-md-4">打 印</button>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        dayin();
+    });
+    function dayin() {
+        bdhtml = window.document.body.innerHTML;//获取当前页的html代码
+        sprnstr = "<!--startprint-->";//设置打印开始区域
+        eprnstr = "<!--endprint-->";//设置打印结束区域
+        prnhtml = bdhtml.substring(bdhtml.indexOf(sprnstr) + 26); //从开始代码向后取html
+        prnhtml = prnhtml.substring(0, prnhtml.indexOf(eprnstr));//从结束代码向前取html
+        window.document.body.innerHTML = prnhtml;
+        window.print();
+    }
+</script>

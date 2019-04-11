@@ -1,0 +1,48 @@
+*{
+    font-family: 宋体!important;
+    font-size: 26px;
+}
+
+.cls {
+    margin-top: 50px;
+    line-height: 2;
+}
+
+.h{
+    text-align: center;
+}
+.civil_left {
+    margin-left: 350px;
+}
+
+.tab{
+    text-indent: 2em;
+}
+
+.u {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dates {
+    text-indent: 3em;
+    letter-spacing: 35px;
+}
+
+
+.legal {
+    margin-left: 400px;
+    margin-top: 80px;
+}
+
+.letter{
+    text-align: right;
+    line-height: 5;
+}
+
+
+/*代理页*/
+
+.word{
+    font-weight: bold;
+}

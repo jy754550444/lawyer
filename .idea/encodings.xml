@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/civil/migrations/__init__.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/civil/static/css/civil.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/civil/static/js/civil.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/civil/templates/static/defence.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/civil/templates/static/indictment.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/civil/templates/static/property.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/civil/templates/static/revoke.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ckeditor/static/ckeditor/ckeditor/config.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/criminal/static/css/civil.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/criminal/templates/static/appraisal.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/criminal/templates/static/bail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/criminal/templates/static/criminalagents.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/criminal/templates/static/defendant_letter.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/criminal/templates/static/proposal.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/defendant/migrations/__init__.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lawyer/migrations/__init__.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/css/font.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wxchat/urls.py" charset="UTF-8" />
+  </component>
+</project>
